@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+echo "----------> getting GDAL deps"
+cd $1
+wget http://download.osgeo.org/gdal/2.1.0/gdal-2.1.0.tar.gz
+tar -xvf gdal-2.1.0.tar.gz
+cd gdal-2.1.0
+./configure --prefix=$1
+make
+make install
+python swig/python/setup.py install

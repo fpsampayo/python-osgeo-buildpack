@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+echo "OSGEO"
+if [ which gdal ]; then
+    echo "OSGEO is already installed"
+    exit 1
+fi
+
+echo "OSGEO not detected.  Installing..."
+exit 0
